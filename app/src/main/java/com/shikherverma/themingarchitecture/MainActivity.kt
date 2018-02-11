@@ -1,5 +1,6 @@
 package com.shikherverma.themingarchitecture
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.NavigationView
@@ -59,10 +60,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.itemId
 
 
-        return if (id == R.id.action_settings) {
-            true
+        if (id == R.id.action_settings) {
+            this.startActivity(Intent(this, SettingsActivity::class.java))
+            return true
         } else super.onOptionsItemSelected(item)
-
+        return false
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
