@@ -9,10 +9,12 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
+import kotlinx.android.synthetic.main.include_content_main.*
+import kotlinx.android.synthetic.main.inflate_item.view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,6 +38,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
         navigationView.setNavigationItemSelectedListener(this)
+
+        val item = Item("Shikher", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+        val listAdapter = ItemsAdapter(List(10) { _ -> item })
+        list.layoutManager = LinearLayoutManager(this)
+        list.adapter = listAdapter
     }
 
     override fun onBackPressed() {
@@ -75,5 +82,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
         drawer.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    data class Item(val author: String, val content: String)
+
+    class ItemsAdapter(private val items: List<Item>) : RecyclerView.Adapter<ViewHolder>() {
+
+        private fun ViewGroup.inflate(layoutRes: Int) = LayoutInflater.from(context).inflate(layoutRes, this, false)
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(parent.inflate(R.layout.inflate_item))
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+
+        override fun getItemCount(): Int = items.size
+    }
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(item: Item) {
+            itemView.author.text = item.author
+            itemView.content.text = item.content
+        }
     }
 }
