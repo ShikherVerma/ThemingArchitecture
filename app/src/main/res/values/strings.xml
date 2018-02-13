@@ -9,6 +9,8 @@
 
     <!-- Strings related to Settings Activity-->
     <string name="title_activity_settings">Settings</string>
+    <string name="pref_title_theme">Enable Night Theme</string>
+    <string name="pref_title_text">Show Larger Text</string>
     <string name="pref_title_name">Change Name</string>
     <string name="pref_default_name">Shikher Verma</string>
     <string name="pref_title_email">Change Email</string>

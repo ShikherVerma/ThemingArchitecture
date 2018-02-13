@@ -12,6 +12,7 @@ import android.support.v7.preference.PreferenceManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_content_main.*
 import kotlinx.android.synthetic.main.inflate_item.view.*
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        val header = nav_view.getHeaderView(0)
+        val nameDisplay = header.findViewById<TextView>(R.id.name_display)
+        nameDisplay.text = sharedPreferences.getString("pref_key_name", "")
+        val emailDisplay = header.findViewById<TextView>(R.id.email_display)
+        emailDisplay.text = sharedPreferences.getString("pref_key_email", "")
 
         val item = Item("Shikher", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
         val listAdapter = ItemsAdapter(List(10) { _ -> item })
