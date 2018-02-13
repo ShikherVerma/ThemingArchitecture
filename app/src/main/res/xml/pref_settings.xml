@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="pref_key_theme"
+        android:title="Enable Night Theme" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_name"
+        android:inputType="textCapWords"
+        android:key="pref_key_name"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_name" />
+
+    <EditTextPreference
+        android:defaultValue="@string/pref_default_email"
+        android:inputType="textEmailAddress"
+        android:key="pref_key_email"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_email" />
+
+</PreferenceScreen>
