@@ -43,6 +43,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val listAdapter = ItemsAdapter(List(10) { _ -> item })
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = listAdapter
+        list.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (dy > 0 && fab.visibility == View.VISIBLE) {
+                    fab.hide()
+                } else if (dy < 0 && fab.visibility != View.VISIBLE) {
+                    fab.show()
+                }
+            }
+        })
     }
 
     override fun onBackPressed() {
