@@ -8,8 +8,8 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
         <item name="themedShareDrawable">@drawable/ic_share_black</item>
         <item name="imageButtonColor">@color/md_black_1000</item>
-        <item name="headingTextAppearance">?android:attr/textAppearanceLarge</item>
-        <item name="normalTextAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="headingTextAppearance">@style/TextBoldMedium</item>
+        <item name="normalTextAppearance">@android:style/TextAppearance.Small</item>
     </style>
 
     <style name="AppThemeDay.NoActionBar">
@@ -25,8 +25,8 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
         <item name="themedShareDrawable">@drawable/ic_share_white</item>
         <item name="imageButtonColor">@color/md_white_1000</item>
-        <item name="headingTextAppearance">?android:attr/textAppearanceMedium</item>
-        <item name="normalTextAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="headingTextAppearance">@style/TextBoldMedium</item>
+        <item name="normalTextAppearance">@android:style/TextAppearance.Small</item>
     </style>
 
     <style name="AppThemeNight.NoActionBar">

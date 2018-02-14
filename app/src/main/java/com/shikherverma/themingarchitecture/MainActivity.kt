@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val emailDisplay = header.findViewById<TextView>(R.id.email_display)
         emailDisplay.text = sharedPreferences.getString("pref_key_email", "")
 
-        val item = Item("Shikher", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+        val item = Item("Author Name", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
         val listAdapter = ItemsAdapter(List(10) { _ -> item })
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = listAdapter

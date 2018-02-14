@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:cardCornerRadius="2sp"
-    app:cardElevation="2sp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -17,7 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10sp">
+            android:paddingTop="@dimen/card_whitespace">
 
             <TextView
                 android:id="@+id/author"
@@ -26,10 +26,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10sp"
-                android:layout_marginStart="10sp"
-                android:hint="qwerty"
-                android:text="Author Name"
+                android:paddingLeft="@dimen/card_whitespace"
                 android:textAppearance="?attr/headingTextAppearance"
                 android:textColor="?attr/colorAccent" />
 
@@ -40,9 +37,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="10sp"
-                android:layout_marginRight="10sp"
-                android:text="1 hours ago"
+                android:paddingRight="@dimen/card_whitespace"
+                android:text="@string/dummy_time"
                 android:textAppearance="?attr/normalTextAppearance" />
 
         </RelativeLayout>
@@ -51,8 +47,8 @@
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="10sp"
-            android:paddingRight="10sp"
+            android:paddingLeft="@dimen/card_whitespace"
+            android:paddingRight="@dimen/card_whitespace"
             android:textAppearance="?attr/normalTextAppearance" />
 
         <LinearLayout
@@ -62,29 +58,26 @@
 
             <ImageButton
                 android:id="@+id/likes"
-                style="?android:attr/borderlessButtonStyle"
+                style="@style/TintedBorderlessButton"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:tint="?attr/imageButtonColor"
                 app:srcCompat="@drawable/ic_thumb_up" />
 
             <ImageButton
                 android:id="@+id/button_share"
-                style="?android:attr/borderlessButtonStyle"
+                style="@style/TintedBorderlessButton"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:tint="?attr/imageButtonColor"
                 app:srcCompat="?attr/themedShareDrawable" />
 
             <ImageButton
                 android:id="@+id/button_replies"
-                style="?android:attr/borderlessButtonStyle"
+                style="@style/TintedBorderlessButton"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:tint="?attr/imageButtonColor"
                 app:srcCompat="@drawable/ic_comment" />
 
         </LinearLayout>
