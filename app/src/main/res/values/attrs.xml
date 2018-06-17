@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themedShareDrawable" format="reference" />
+    <attr name="imageButtonColor" format="color" />
+    <attr name="headingTextAppearance" format="reference" />
+    <attr name="normalTextAppearance" format="reference" />
+</resources>

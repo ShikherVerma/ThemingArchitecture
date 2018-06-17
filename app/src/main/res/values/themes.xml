@@ -2,10 +2,14 @@
 
     <!-- Day Theme -->
     <style name="AppThemeDay" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/md_indigo_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700</item>
+        <item name="colorAccent">@color/md_pink_A200</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="themedShareDrawable">@drawable/ic_share_black</item>
+        <item name="imageButtonColor">@color/md_black_1000</item>
+        <item name="headingTextAppearance">@style/TextBoldMedium</item>
+        <item name="normalTextAppearance">@android:style/TextAppearance.Small</item>
     </style>
 
     <style name="AppThemeDay.NoActionBar">
@@ -13,14 +17,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppThemeDay.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="AppThemeDay.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
     <!-- Night Theme -->
     <style name="AppThemeNight" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/md_indigo_700</item>
+        <item name="colorPrimaryDark">@color/md_indigo_900</item>
+        <item name="colorAccent">@color/md_pink_A200</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="themedShareDrawable">@drawable/ic_share_white</item>
+        <item name="imageButtonColor">@color/md_white_1000</item>
+        <item name="headingTextAppearance">@style/TextBoldMedium</item>
+        <item name="normalTextAppearance">@android:style/TextAppearance.Small</item>
     </style>
 
     <style name="AppThemeNight.NoActionBar">

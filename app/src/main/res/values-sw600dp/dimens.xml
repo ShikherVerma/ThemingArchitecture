@@ -1,0 +1,11 @@
+<resources>
+    <!-- This is what I follow to decide dimens for phone and tablet. Most tablet dimens are 1.5 times phone dimens -->
+    <!-- https://material.io/guidelines/layout/metrics-keylines.html#metrics-keylines-ratio-keylines -->
+    <dimen name="drawer_outer_padding">24dp</dimen>
+    <dimen name="nav_header_whitespace">12dp</dimen>
+    <dimen name="nav_header_height">210dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_whitespace">12dp</dimen>
+</resources>

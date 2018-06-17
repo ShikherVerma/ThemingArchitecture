@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextBoldMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TintedBorderlessButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:tint">?attr/imageButtonColor</item>
+    </style>
+</resources>
